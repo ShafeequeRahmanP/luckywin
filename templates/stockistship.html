@@ -1,0 +1,164 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <title>Luckey Win Lotteries</title>
+  </head> 
+  <body>
+  
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+        <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/today_result/">Today's Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/old_results/">Old Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/stockistship/">Stockistship</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+      </nav>
+
+      <section class="second">
+        <div class="container">
+          <h1>Apply for stockist/sub-stockist/seller</h1>
+        </div>
+      </section>
+
+
+      <section class="forms">
+          <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.name}}
+                    </div>
+        
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.agency_name}}
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.contact_number_1}}
+                    </div>
+                    
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.contact_number_2}}
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.email}}
+                    </div>
+                    <br>
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.street}}
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-4" style="text-align: left;">
+                        <label></label>
+                        {{form.district}}
+                    </div>
+                    <br>
+                    <div class="col-md-4" style="text-align: left;">
+                        <label></label>
+                        {{form.state}}
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <label></label>
+                        {{form.pincode}}
+                    </div>               
+                 </div>
+
+                 <div class="row">
+                    <div class="col-md-6" style="text-align: left;">
+                        <label> </label>
+                        {{form.existing_stocklist_status}}
+                    </div>
+                    <br>
+                    <div class="col-md-6" style="text-align: left;">
+                        <label></label>
+                        {{form.stockist_type}}
+                    </div>
+                 </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center"><p>&nbsp;</p>
+                            <button class="glow-on-hover" style="margin-top: 0px;">
+                                Submit
+                            </button>              
+                        </div>
+                    </div>
+              </form>
+          </div>
+      </section>
+
+     
+
+      
+
+      <footer>
+        <ul class="nav justify-content-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/today_result/">Today's Result |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/old_results/">Old Result |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/stockistship/">Stockistship |</a>
+          </li>
+        </ul>
+        <!-- <h3>THE DIRECTOR</h3>
+        <h5>Diamond Gold Lotteries</h5>
+        <h5><i class="fas fa-mobile icons"></i><a href="tel:9874563210">9874563210</a> , <a href="tel:9874563210">9874563210</a></h5>
+        <h5><i class="fas fa-envelope icons"></i><a href="mailto:test@gmail.com">lotteries.contact@gmail.com</a></h5>
+        <p>This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="http://scripture.world/" target="_blank">Scripture</a></p> -->
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

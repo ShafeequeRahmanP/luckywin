@@ -1,0 +1,1 @@
+web: gunicorn luckywin.wsgi --log-file -
